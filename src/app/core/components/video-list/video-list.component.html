@@ -1,0 +1,19 @@
+  <div class="mx-5 p-4">
+    <div *ngIf="videoList.length>0;else No_Video_FOUND " class="row row-cols-1 row-cols-md-3 g-4">
+        <div *ngFor="let video of videoList" class="col" style="cursor: pointer;" [routerLink]="'/video/'+video?.id">
+          <div class="card h-100">
+            <img [src]="video?.poster" class="card-img-top" [alt]="video?.name">
+            <div class="card-body">
+              <h5 class="card-title">{{video.name}}</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <ng-template #No_Video_FOUND>
+      <h4>
+          Videos Not Found
+      </h4>
+  </ng-template>
+  

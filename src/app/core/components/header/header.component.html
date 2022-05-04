@@ -1,0 +1,12 @@
+<nav class="navbar navbar-light bg-transparent" >
+    <div class="container-fluid">
+      <a class="navbar-brand"><img src="../../../../assets/images/logo.png" style="height:60px" /></a>
+      <form class="d-flex mx-3">
+        <button *ngIf="!isLogin" class="btn btn-danger text-bolder" routerLink="/login">Sign In</button>
+        <a *ngIf="isLogin" class=" btn btn-danger  text-bolder mx-3" routerLink="/home" >Home</a>
+
+        <button *ngIf="isLogin" class="btn btn-danger text-bolder" (click)="logout()" >Logout</button>
+        
+      </form>
+    </div>
+  </nav>

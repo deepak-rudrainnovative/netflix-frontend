@@ -1,0 +1,8 @@
+<div class="container bg-dark d-flex justify-content-center py-4 position-relative">
+    <button class="btn btn-close position-absolute top-20 end-0 bg-danger me-3" routerLink="/home"></button>
+    <video controls muted style="height: 80vh;width: 80vw;">
+        <source [src]="videoUrl+'/'+videoId" type="video/mp4">
+        <p>your browser not support this media</p>
+    </video>
+</div>
+<app-footer></app-footer>
